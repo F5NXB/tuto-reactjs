@@ -19,6 +19,10 @@ class App extends React.Component {
     console.log("Click_3 id = " + id);
   };
 
+  handleClick_4(id) {
+    console.log("Click_4 id = " + id);
+  }
+
   render() {
     return (
       <div className="App">
@@ -37,6 +41,10 @@ class App extends React.Component {
         state id = {this.state.id} <br />
         <p>Première méthode : </p>
         <button onClick={() => this.handleClick_3(this.state.id)}>
+          Cliquez ici
+        </button>
+        <p>Deuxième méthode : </p>
+        <button onClick={this.handleClick_4.bind(this, this.state.id)}>
           Cliquez ici
         </button>
       </div>
